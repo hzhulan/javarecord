@@ -16,7 +16,7 @@ public class String2ObjectArray {
      * 	at com.hz.problems.String2ObjectArray.test01(String2ObjectArray.java:17)
      *
      * 	new String[2]先分配了内存空间，创建了对象的数组对象
-     * 	Object[] b = a; 相当于修改了表面引用
+     * 	Object[] b = a; 只是相当于修改了引用  换了个马甲而已
      * 	因此赋值掐类型会报错
      */
     public void test01() {
@@ -25,6 +25,14 @@ public class String2ObjectArray {
         Object[] b = a;
         a[0] = "hi";
         b[1] = Integer.valueOf(42);
+    }
+
+    @Test
+    public void test02() {
+
+        Object[] a = new String[2];
+        a[0] = "hi";
+        a[1] = Integer.valueOf(42);
     }
 
 }
