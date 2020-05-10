@@ -13,6 +13,7 @@ public class PicEncode {
     /**
      * 本地图片转换Base64的方法
      * 参考： https://blog.csdn.net/qq_27870421/article/details/103278761
+     * html显示demo resources\page\demo.html
      *
      * @param imgPath     
      */
