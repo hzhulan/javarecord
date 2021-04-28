@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @authod: pp_lan on 2020/3/20.
+ * @author: pp_lan on 2020/3/20.
  * 原型模式：浅复制、深复制
  */
 public class ProtoType {

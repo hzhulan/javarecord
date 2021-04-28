@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 /**
- * @authod: pp_lan on 2020/3/13.
+ * @author: pp_lan on 2020/3/13.
  */
 public class FileSaveDemo {
     public static void main(String[] args) {

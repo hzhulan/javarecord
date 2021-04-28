@@ -3,7 +3,7 @@ package com.hz.huawei;
 import java.util.*;
 
 /**
- * @authod: pp_lan on 2020/3/13.
+ * @author: pp_lan on 2020/3/13.
  */
 public class CaseOne {
 

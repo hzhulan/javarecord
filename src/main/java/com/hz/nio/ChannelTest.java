@@ -10,7 +10,7 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 
 /**
- * @authod: pp_lan on 2020/4/7.
+ * @author: pp_lan on 2020/4/7.
  */
 public class ChannelTest {
 

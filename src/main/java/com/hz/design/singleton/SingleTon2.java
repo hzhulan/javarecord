@@ -1,7 +1,7 @@
 package com.hz.design.singleton;
 
 /**
- * @authod: pp_lan on 2020/3/19.
+ * @author: pp_lan on 2020/3/19.
  * 使用enum辅助实现
  */
 public class SingleTon2 {

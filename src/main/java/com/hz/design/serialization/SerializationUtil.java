@@ -3,7 +3,7 @@ package com.hz.design.serialization;
 import java.io.*;
 
 /**
- * @authod: pp_lan on 2020/3/23.
+ * @author: pp_lan on 2020/3/23.
  */
 public class SerializationUtil {
 

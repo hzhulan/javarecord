@@ -5,7 +5,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 /**
- * @authod: pp_lan on 2020/3/12.
+ * @author: pp_lan on 2020/3/12.
  */
 public class SortDemo {
 

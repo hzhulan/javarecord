@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @authod: pp_lan on 2020/4/9.
+ * @author: pp_lan on 2020/4/9.
  */
 public class GcOverHeadDemo {
 

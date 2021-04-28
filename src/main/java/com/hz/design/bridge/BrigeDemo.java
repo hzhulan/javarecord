@@ -1,7 +1,7 @@
 package com.hz.design.bridge;
 
 /**
- * @authod: pp_lan on 2020/3/23.
+ * @author: pp_lan on 2020/3/23.
  */
 public class BrigeDemo {
 

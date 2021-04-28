@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * @authod: pp_lan on 2020/4/2.
+ * @author: pp_lan on 2020/4/2.
  */
 public class SingleTon {
     private static volatile SingleTon instance;

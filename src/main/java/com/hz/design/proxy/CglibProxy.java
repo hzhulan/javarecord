@@ -7,7 +7,7 @@ import net.sf.cglib.proxy.MethodProxy;
 import java.lang.reflect.Method;
 
 /**
- * @authod: pp_lan on 2020/3/20.
+ * @author: pp_lan on 2020/3/20.
  */
 public class CglibProxy<T> {
 

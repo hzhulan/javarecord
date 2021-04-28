@@ -3,7 +3,7 @@ package com.hz.collections;
 import java.util.concurrent.ArrayBlockingQueue;
 
 /**
- * @authod: pp_lan on 2020/4/8.
+ * @author: pp_lan on 2020/4/8.
  */
 public class BlockingQueue {
 

@@ -1,7 +1,7 @@
 package com.hz.design.factory;
 
 /**
- * @authod: pp_lan on 2020/3/18.
+ * @author: pp_lan on 2020/3/18.
  * 职责单一，只负责生产单一产品。
  */
 public class FactoryDemo {

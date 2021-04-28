@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Random;
 
 /**
- * @authod: pp_lan on 2020/3/20.
+ * @author: pp_lan on 2020/3/20.
  * 享元模式: 共享对象，直接返回在内存中已有的对象，避免重新创建。
  */
 public class FlyWeight {

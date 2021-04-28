@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.concurrent.*;
 
 /**
- * @authod: pp_lan on 2020/3/30.
+ * @author: pp_lan on 2020/3/30.
  */
 public class CharDemo {
     public static void main(String[] args) {

@@ -1,7 +1,7 @@
 package com.hz.design.adapter;
 
 /**
- * @authod: pp_lan on 2020/3/23.
+ * @author: pp_lan on 2020/3/23.
  * 班级节目：男孩唱歌、女孩跳舞
  */
 interface Student {

@@ -6,7 +6,7 @@ import java.io.InputStream;
 import java.util.Base64;
 
 /**
- * @authod: pp_lan on 2020/5/10.
+ * @author: pp_lan on 2020/5/10.
  */
 public class PicEncode {
 

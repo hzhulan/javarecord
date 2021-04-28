@@ -6,7 +6,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * @authod: pp_lan on 2020/3/26.
+ * @author: pp_lan on 2020/3/26.
  */
 public class IncrTest {
     public static void concurrentTest() throws InterruptedException {

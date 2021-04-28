@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 /**
- * @authod: pp_lan on 2020/4/3.
+ * @author: pp_lan on 2020/4/3.
  */
 public class ReentrantReadWriteDemo {
 

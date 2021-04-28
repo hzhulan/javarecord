@@ -3,7 +3,7 @@ package com.hz.programe;
 import java.util.Scanner;
 
 /**
- * @authod: pp_lan on 2020/3/12.
+ * @author: pp_lan on 2020/3/12.
  */
 public class ToHex {
     public static void main(String[] args) {

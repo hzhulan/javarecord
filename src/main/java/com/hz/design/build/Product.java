@@ -1,7 +1,7 @@
 package com.hz.design.build;
 
 /**
- * @authod: pp_lan on 2020/3/19.
+ * @author: pp_lan on 2020/3/19.
  */
 public class Product {
 

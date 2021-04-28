@@ -3,7 +3,7 @@ package com.hz.programe;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @authod: pp_lan on 2020/3/26.
+ * @author: pp_lan on 2020/3/26.
  */
 public class DeadLockDemo {
 

@@ -3,7 +3,7 @@ package com.hz.base;
 import org.junit.Test;
 
 /**
- * @authod: pp_lan on 2020/4/15.
+ * @author: pp_lan on 2020/4/15.
  */
 public class TenaryOperator {
 

@@ -27,7 +27,7 @@ import java.nio.ByteBuffer;
  *
  *
  * mark：记录当前position的位置。通过reset() 恢复到mark的位置。
- * @authod: pp_lan on 2020/4/7.
+ * @author: pp_lan on 2020/4/7.
  */
 public class TestBuffer {
     @Test

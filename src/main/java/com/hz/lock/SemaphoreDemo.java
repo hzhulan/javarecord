@@ -4,7 +4,7 @@ import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @authod: pp_lan on 2020/4/3.
+ * @author: pp_lan on 2020/4/3.
  */
 public class SemaphoreDemo {
     public static void main(String[] args) {

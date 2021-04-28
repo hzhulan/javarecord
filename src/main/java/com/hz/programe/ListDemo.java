@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 
 /**
- * @authod: pp_lan on 2020/4/2.
+ * @author: pp_lan on 2020/4/2.
  */
 public class ListDemo {
     public static void main(String[] args) {

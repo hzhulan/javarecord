@@ -3,7 +3,7 @@ package com.hz.problems;
 import org.junit.Test;
 
 /**
- * @authod: pp_lan on 2020/4/14.
+ * @author: pp_lan on 2020/4/14.
  * 原文链接: http://www.yinwang.org/blog-cn/2020/02/13/java-type-system
  */
 public class String2ObjectArray {

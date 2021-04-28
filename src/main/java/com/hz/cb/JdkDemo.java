@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @authod: pp_lan on 2020/3/5.
+ * @author: pp_lan on 2020/3/5.
  */
 public class JdkDemo {
 

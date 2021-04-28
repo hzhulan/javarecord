@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 使用引用队列，在清除前，放入队列中
- * @authod: pp_lan on 2020/4/9.
+ * @author: pp_lan on 2020/4/9.
  */
 public class ReferenceQueueDemo {
     public static void main(String[] args) throws InterruptedException {

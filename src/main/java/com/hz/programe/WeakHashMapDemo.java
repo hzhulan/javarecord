@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.WeakHashMap;
 
 /**
- * @authod: pp_lan on 2020/4/9.
+ * @author: pp_lan on 2020/4/9.
  */
 public class WeakHashMapDemo {
 

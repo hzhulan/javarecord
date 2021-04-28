@@ -11,7 +11,7 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.concurrent.atomic.AtomicStampedReference;
 
 /**
- * @authod: pp_lan on 2020/4/2.
+ * @author: pp_lan on 2020/4/2.
  * CAS样例
  * 缺点：
  * 1. 循环时间长，开销大（CPU负荷）

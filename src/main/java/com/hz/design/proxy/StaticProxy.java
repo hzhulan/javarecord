@@ -1,7 +1,7 @@
 package com.hz.design.proxy;
 
 /**
- * @authod: pp_lan on 2020/3/20.
+ * @author: pp_lan on 2020/3/20.
  */
 public class StaticProxy {
     interface Car {

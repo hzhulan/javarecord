@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 死锁demo
- * @authod: pp_lan on 2020/4/9.
+ * @author: pp_lan on 2020/4/9.
  */
 public class HoldLockThread implements Runnable {
 

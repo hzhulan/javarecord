@@ -1,7 +1,7 @@
 package com.hz.programe;
 
 /**
- * @authod: pp_lan on 2020/3/26.
+ * @author: pp_lan on 2020/3/26.
  */
 public class Hello {
 

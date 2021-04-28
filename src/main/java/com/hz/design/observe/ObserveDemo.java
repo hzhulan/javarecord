@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @authod: pp_lan on 2020/3/25.
+ * @author: pp_lan on 2020/3/25.
  * 使用场景：进行广播通知。如：拍卖出价，通知其他人进行出价
  */
 public class ObserveDemo {

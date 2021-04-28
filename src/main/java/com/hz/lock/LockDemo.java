@@ -5,7 +5,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * @authod: pp_lan on 2020/4/8.
+ * @author: pp_lan on 2020/4/8.
  */
 public class LockDemo {
 

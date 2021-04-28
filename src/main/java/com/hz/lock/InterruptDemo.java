@@ -3,7 +3,7 @@ package com.hz.lock;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @authod: pp_lan on 2020/4/8.
+ * @author: pp_lan on 2020/4/8.
  */
 public class InterruptDemo {
     public static void main(String[] args) {
