@@ -28,17 +28,34 @@ public class SingleTon {
     public static void main(String[] args) {
         ThreadPoolExecutor executor = new ThreadPoolExecutor(10, 200, 1, TimeUnit.SECONDS, new LinkedBlockingDeque<>(),
                 new ThreadPoolExecutor.AbortPolicy());
-        AtomicInteger num = new AtomicInteger(0);
-        for (int i = 0; i < 1000; i++) {
-            executor.submit(() -> {
-                SingleTon instance = SingleTon.getInstance();
-                num.incrementAndGet();
-                if (instance == null) {
-                    System.out.println("instance 为空" + Thread.currentThread().getName());
-                } else {
-                    System.out.println(num);
+        try {
+            AtomicInteger num = new AtomicInteger(0);
+            for (int i = 0; i < 1000; i++) {
+                executor.submit(() -> {
+                    SingleTon instance = SingleTon.getInstance();
+                    num.incrementAndGet();
+                    if (instance == null) {
+                        System.out.println("instance 为空" + Thread.currentThread().getName());
+                    } else {
+                        System.out.println(num);
+                    }
+                });
+            }
+        } finally {
+            executor.shutdown();
+            try {
+                if (!executor.awaitTermination(1, TimeUnit.MINUTES)) {
+                    executor.shutdownNow();
+                    if (!executor.awaitTermination(1, TimeUnit.MINUTES)) {
+                        System.out.println("线程池未能正常关闭");
+                    }
                 }
-            });
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+                executor.shutdownNow();
+            }
         }
+
+
     }
 }
