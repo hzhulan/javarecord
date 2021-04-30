@@ -7,7 +7,6 @@ public class ConcreateBuilder extends Builder {
     @Override
     public void buildPartA() {
         this.product.setPartA("建造A部分");
-        System.out.println();
     }
 
     @Override
@@ -26,5 +25,11 @@ public class ConcreateBuilder extends Builder {
         buildPartB();
         buildPartC();
         return super.getResult();
+    }
+
+    public static void main(String[] args) {
+        ConcreateBuilder builder = new ConcreateBuilder();
+        Product result = builder.getResult();
+        System.out.println(result);
     }
 }
