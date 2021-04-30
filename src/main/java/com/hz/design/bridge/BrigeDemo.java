@@ -37,6 +37,7 @@ public class BrigeDemo {
         }
 
         public void driveCar() {
+            System.out.println(this.name + "上车");
             this.car.drive();
         }
 
@@ -57,7 +58,11 @@ public class BrigeDemo {
     }
 
     public static void main(String[] args) {
+        BrigeDemo bridge = new BrigeDemo();
+        Car jeep = bridge.new Jeep();
+        Man man = bridge.new Man("老李", jeep);
 
+        man.driveCar();
     }
 
 }
