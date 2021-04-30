@@ -7,6 +7,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 /**
  * @author: pp_lan on 2020/4/3.
+ * @Description: 允许多个读线程同时访问，但不允许写线程和读线程、写线程和写线程同时访问。demo中写操作依次写入，写完后。读操作可以同时执行
  */
 public class ReentrantReadWriteDemo {
 
