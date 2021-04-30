@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @author: pp_lan on 2020/4/3.
+ * @Description: Semaphore也是一个线程同步的辅助类，可以维护当前访问自身的线程个数，并提供了同步机制
  */
 public class SemaphoreDemo {
     public static void main(String[] args) {
@@ -29,12 +30,5 @@ public class SemaphoreDemo {
                 }
             }, String.valueOf(i)).start();
         }
-
-        String lockA = "lockA";
-        String lockB = "lockB";
-
-        new Thread(new HoldLockThread(lockA, lockB), "thread-a").start();
-        new Thread(new HoldLockThread(lockB, lockA), "thread-b").start();
-
     }
 }
