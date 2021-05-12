@@ -20,7 +20,7 @@ public class LeakSuspectDemo {
         List<Car> list = new ArrayList<>();
         while (true) {
             list.add(demo.new Car());
-            TimeUnit.MILLISECONDS.sleep(20);
+            TimeUnit.MILLISECONDS.sleep(100);
         }
     }
 
