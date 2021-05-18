@@ -35,7 +35,7 @@ public class CasDemo {
         executor.submit(() -> {
 
             try {
-                TimeUnit.MILLISECONDS.sleep((long)(Math.random()*200));
+                TimeUnit.MILLISECONDS.sleep((long) (Math.random() * 200));
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -45,7 +45,7 @@ public class CasDemo {
         });
         executor.submit(() -> {
             try {
-                TimeUnit.MILLISECONDS.sleep((long)(Math.random()*200));
+                TimeUnit.MILLISECONDS.sleep((long) (Math.random() * 200));
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -79,6 +79,7 @@ public class CasDemo {
 
     /**
      * Junit中使用sleep会不运行，此处改为main方法测试号
+     *
      * @param args
      */
     public static void main(String[] args) throws InterruptedException {
