@@ -4,6 +4,7 @@ import java.util.Iterator;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @file: CopyOnWriteArrayListDemo
@@ -21,6 +22,8 @@ import java.util.concurrent.Executors;
  * ）
  *
  * 2、不能用于实时读的场景，像拷贝数组、新增元素都需要时间，所以调用一个set操作后，读取到数据可能还是旧的,虽然CopyOnWriteArrayList 能做到最终一致性,但是还是没法满足实时性要求；
+ *
+ * 此List会出现类似幻读和不可重复读的情况 导致读取不准确
  * @Author: pp_lan
  * @Date: 2021/5/18
  */
@@ -29,16 +32,32 @@ public class CopyOnWriteArrayListDemo {
     public static void main(String[] args) {
         CopyOnWriteArrayList list = new CopyOnWriteArrayList();
         ExecutorService pool = Executors.newFixedThreadPool(2);
+        list.add(-1);
         try {
             pool.submit(() -> {
                 for (int i = 0; i < 10; i++) {
-                    list.add(i);
+                    list.set(0, i);
+                    try {
+                        TimeUnit.MILLISECONDS.sleep(10);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 }
             });
+
             pool.submit(() -> {
-                for(Iterator it = list.iterator(); it.hasNext();) {
-                    System.out.println(it.next());
+                int count = 5;
+                while (count-- > 0) {
+                    for(Iterator it = list.iterator(); it.hasNext();) {
+                        System.out.println(it.next());
+                    }
+                    try {
+                        TimeUnit.MILLISECONDS.sleep(20);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 }
+
             });
         } finally {
             try {
