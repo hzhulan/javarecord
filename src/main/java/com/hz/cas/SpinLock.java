@@ -1,11 +1,14 @@
 package com.hz.cas;
 
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
  * @file: SpinLock
  * @version: 1.0
- * @Description: 重入锁
+ * @Description: 自旋实现重入锁
  * @Author: pp_lan
  * @Date: 2021/5/18
  */
@@ -24,14 +27,20 @@ public class SpinLock {
 
     public void lock() {
         Thread t = Thread.currentThread();
+        System.out.println("进入lock" + t.getName());
         // if re-enter, increment the count.
         if (t == owner.get()) {
             ++count;
             return;
         }
 
-        //spin
-        while (owner.compareAndSet(null, t)) {
+        //spin 当线程不为null的时候， 整体为true，自旋等待
+        while (!owner.compareAndSet(null, t)) {
+            try {
+                TimeUnit.MILLISECONDS.sleep(10);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -45,6 +54,42 @@ public class SpinLock {
             } else {
                 // compareAndSet is not need here, already checked
                 owner.set(null);
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        SpinLock lock = new SpinLock();
+        ExecutorService threadPool = Executors.newFixedThreadPool(2);
+        try {
+            threadPool.submit(() -> {
+                try {
+                    TimeUnit.MILLISECONDS.sleep(500);
+                    lock.lock();
+                    System.out.println("haha");
+                    lock.unlock();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            });
+            threadPool.submit(() -> {
+                try {
+                    lock.lock();
+                    System.out.println("haha2");
+                    TimeUnit.SECONDS.sleep(10);
+                    lock.unlock();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            });
+        } finally {
+            try {
+                threadPool.shutdown();
+                if (!threadPool.awaitTermination(1, TimeUnit.MINUTES)) {
+                     threadPool.shutdownNow();
+                }
+            } catch (InterruptedException e) {
+                threadPool.shutdownNow();
             }
         }
     }
