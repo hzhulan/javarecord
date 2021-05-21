@@ -80,22 +80,16 @@ public class RedisDistributeLock {
         return getLock(lockName, 2 * 3600);
     }
 
+    /**
+     * 错误示范
+     * @param lockName
+     * @return
+     */
     @Deprecated
     public boolean getLockPrimary(String lockName) {
         Jedis jedis = getClient();
         boolean locked = false;
-        Long status;
-        try {
-            status = jedis.setnx(lockName, "true");
-        } finally {
-            //设置2个小时的失效时间，避免宕机导致锁无法释放
-            try {
-                jedis.expire(lockName, 2 * 3600);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-
+        Long status = jedis.setnx(lockName, "true");
         if (status == 0) {
             locked = true;
         }
